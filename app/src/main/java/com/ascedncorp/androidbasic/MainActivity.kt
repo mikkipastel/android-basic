@@ -13,5 +13,12 @@ class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .add(R.id.container, MainFragment.newInstance())
+                .addToBackStack(null)
+                .commit()
+        }
     }
 }
