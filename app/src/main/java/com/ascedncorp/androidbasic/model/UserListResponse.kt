@@ -2,7 +2,7 @@ package com.ascedncorp.androidbasic.model
 
 import com.google.gson.annotations.SerializedName
 
-data class UserListResponse(
+class UserListResponse(
     @SerializedName("page") val page: Int? = null,
     @SerializedName("per_page") val perPage: Int? = null,
     @SerializedName("total") val total: Int? = null,
@@ -11,7 +11,7 @@ data class UserListResponse(
     @SerializedName("support") val support: Support? = null,
 )
 
-data class DataItem(
+class DataItem(
     @SerializedName("id") val id: Int? = null,
     @SerializedName("email") val email: String? = null,
     @SerializedName("first_name") val firstName: String? = null,
@@ -19,7 +19,7 @@ data class DataItem(
     @SerializedName("avatar") val avatar: String? = null,
 )
 
-data class Support(
+class Support(
     @SerializedName("url") val url: String? = null,
     @SerializedName("text") val text: String? = null,
 )
